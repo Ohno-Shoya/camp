@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Comment;
 use Illuminate\Http\Request;
+
+use App\Comment;
 
 class CommentController extends Controller
 {
-    public function create() 
-   {
-       $comments = Comment::all();
-       return view('comment/create',compact('comments'));
-   }
+    public function add()
+  {
+      return view('comment.create');
+  }
+    public function create(Request $request){
+        return redirect('comment/create');
+    }
+    
+    public function show(Request $request){
+        return view('comment/show');
+    }
 }

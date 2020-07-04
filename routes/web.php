@@ -19,9 +19,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'ItemController@index')->middleware('auth');
 });
 
+// メイン画面処理
 Route::get('/', 'ItemController@index');
 
-Route::get('/comment', 'CommentController@create')->middleware('auth');
+// コメント画面処理
+Route::get('comment/create', 'CommentController@add')->middleware('auth');
+Route::post('comment/create', 'CommentController@create')->middleware('auth');
+Route::get('comment/show', 'CommentController@show')->middleware('auth');
 
 Auth::routes();
 
