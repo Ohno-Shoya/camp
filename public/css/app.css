@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -10926,5 +10926,32 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fffacd;
+  color: #000;
+}
+
+.navbar-laravel {
+  background-color: #ff8c00;
+  box-shadow: 0 2px 4px black;
+}
+
+.navbar-brand {
+  color: #6b8e23 !important;
+  font-size: 60px;
+}
+
+.item_box {
+  color: #4c4c4c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 24px;
+  padding: 24px 8px;
+  font-size: 1.1em;
+  background-color: #fefefe;
 }
 

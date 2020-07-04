@@ -16,11 +16,15 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('/', 'ItemController@index');
+    Route::get('/', 'ItemController@index')->middleware('auth');
 });
 
-Route::get('/', 'ItemController@index')->middleware('auth');
+Route::get('/', 'ItemController@index');
+
+Route::get('/comment', 'CommentController@create')->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
