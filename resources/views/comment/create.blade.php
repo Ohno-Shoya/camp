@@ -1,5 +1,5 @@
 {{-- layouts/admin.blade.phpを読み込む --}}
-@extends('layouts.comment')
+@extends('layouts.admin')
 
 
 {{-- admin.blade.phpの@yield('title')に'コメント投稿'を埋め込む --}}
@@ -7,12 +7,12 @@
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
-<div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h2>コメント投稿</h2>
-                <form action="{{ action('CommentController@create') }}" method="post" enctype="multipart/form-data">
-
+<div class="container-fluid">
+   <div class="">
+       <div class="mx-auto" style="max-width:800px">
+           <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">コメント投稿</h1>
+           <div class="">
+              <form action="{{ action('CommentController@create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
@@ -35,7 +35,9 @@
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>
-            </div>
-        </div>
-    </div>
+           </div>
+       </div>
+   </div>
+</div>
+
 @endsection
