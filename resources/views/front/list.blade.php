@@ -18,16 +18,16 @@
                     <div class="col-xs-6 col-sm-4 col-md-4 ">
                         <div class="item_box">
                               {{$item->name}} <br>
-                              <img src="/image/{{$item->image_path}}" alt="" class="incart" ><br>
-                              {{$item->maker}} <br>
-                              {{$item->price}}円<br>
-                              {{$item->comment}} <br>
+                              <img src="/image/{{$item->image_path}}" alt="" class="incart" width="200" height="200" ><br>
+                              メーカー：{{$item->maker}} <br>
+                              価格：{{$item->price}}円<br>
+                              コメント：{{$item->comment}} <br>
                               {{$item->detail}} <br>
                               <div class="text-left" >
                             　   <a href="{{ action('CommentController@create') }}">コメントをする</a>
                               </div>
                               <div class="text-left" >
-                            　   <a href="{{ action('CommentController@show') }}">コメントを見る</a>
+                            　   <a href="{{ action('CommentController@show', ['id' => $item->id]) }}">コメントを見る</a>
                               </div>
                         </div>
                     </div>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Comment;
 
+use App\Item;
+
 class CommentController extends Controller
 {
     public function add()
@@ -17,6 +19,7 @@ class CommentController extends Controller
     }
     
     public function show(Request $request){
-        return view('comment/show');
+        $item = Item::find($request->id);
+        return view('comment/show',compact('item'));
     }
 }
