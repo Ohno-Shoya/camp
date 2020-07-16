@@ -3,7 +3,7 @@
 
 
 {{-- admin.blade.phpの@yield('title')に'ページ名'を埋め込む --}}
-@section('title', '登録アイテム')
+@section('title', '▲TentFans')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
