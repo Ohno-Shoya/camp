@@ -15,6 +15,19 @@ class CommentController extends Controller
       return view('comment.create');
   }
     public function create(Request $request){
+        // バリデーションする
+        $this->validate($request,Comment::$rules);
+        
+        // コメントモデルとコメントフォームからデータを取得する
+        $comment = new Comment;
+        $form = $request->all();
+        
+        // フォームからのトークンを削除
+        unset($form['_token']);
+        
+        // データの保存
+        $comment->fill($form);
+        $comment->save();
         return redirect('comment/create');
     }
     
