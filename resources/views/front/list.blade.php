@@ -24,7 +24,7 @@
                               コメント：{{$item->comment}} <br>
                               {{$item->detail}} <br>
                               <div class="text-left" >
-                            　   <a href="{{ action('CommentController@create') }}">コメントをする</a>
+                            　   <a href="{{ action('CommentController@create') }}">コメントをする。</a>
                               </div>
                               <div class="text-left" >
                             　   <a href="{{ action('CommentController@show', ['id' => $item->id]) }}">コメントを見る</a>
