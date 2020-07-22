@@ -32,6 +32,7 @@
                             <textarea class="form-control" name="comment" rows="20">{{ old('comment') }}</textarea>
                         </div>
                     </div>
+                    <input type="hidden"  name="item_id" value="{{ $item->id }}">
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>

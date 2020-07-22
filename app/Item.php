@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    public function sidebar()
+    public function comments()
     {
-      return $this->hasMany('App\Sideber');
-
+        return $this->hasMany(App\Comment);
     }
 }

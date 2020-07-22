@@ -12,4 +12,9 @@ class Comment extends Model
         'name' => 'required',
         'comment' => 'required',
     );
+    
+    public function item()
+    {
+        return $this->belongsTo(App\Item);
+    }
 }
