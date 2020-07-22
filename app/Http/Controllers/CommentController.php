@@ -12,6 +12,7 @@ class CommentController extends Controller
 {
     public function add(Request $request)
   {
+    // itemのidをもってコメントフォームへ移動する
       $item = Item::find($request->id);
     //   dd($item);
       return view('comment.create',["item" => $item]);
@@ -23,6 +24,8 @@ class CommentController extends Controller
         // コメントモデルとコメントフォームからデータを取得する
         $comment = new Comment;
         $form = $request->all();
+        
+        // コメントフォームからitem_idを取得
         $item = Item::find($request->item_id);
         $comment->item_id = $item->id;
         
