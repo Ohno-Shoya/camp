@@ -10,7 +10,7 @@
 <div class="container-fluid">
    <div class="">
        <div class="mx-auto" style="max-width:800px">
-           <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">みんなのコメント</h1>
+           <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">{{$item->name}}</h1>
            <div class="">
                 <!--商品一覧を出したい-->
                 <div class="show_item_box">
@@ -21,9 +21,21 @@
                     コメント：{{$item->comment}} <br>
                     {{$item->detail}} <br>
                 </div>
-                <!--コメント表示-->
-                <h2>コメントを表示したい。</h2>
            </div>
+                <!--コメント一覧を表示-->
+           @foreach($comments as $comment)
+                <div class="">
+                    <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">{{$item->name}}へのコメント</h1>
+                    <div class="card" style="width: 800px;">
+                        <div class="comment_box">
+                            <h3 class="card-header"> {{$comment->name}}</h3><br>
+                            <div class="card-body">
+		                         <p class="card-text">{{$comment->comment}}</p><br>
+	                        </div>
+                        </div>
+                    </div>>
+                </div>>
+           @endforeach
        </div>
    </div>
 </div>

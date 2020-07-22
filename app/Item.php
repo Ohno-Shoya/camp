@@ -8,6 +8,6 @@ class Item extends Model
 {
     public function comments()
     {
-        return $this->hasMany(App\Comment);
+        return $this->hasMany(Comment::class);
     }
 }

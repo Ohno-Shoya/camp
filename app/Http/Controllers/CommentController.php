@@ -40,7 +40,7 @@ class CommentController extends Controller
     
     public function show(Request $request){
         $item = Item::find($request->id);
-        // $comments = Item::find($request->id)->comments;
-        return view('comment/show',compact('item'));
+        $comments = Item::find($request->id)->comments;
+        return view('comment/show',compact('item','comments'));
     }
 }
