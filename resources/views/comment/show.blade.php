@@ -25,7 +25,7 @@
                 <!--コメント一覧を表示する-->
            @foreach($comments as $comment)
                 <div class="">
-                    <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">{{$item->name}}へのコメント</h1>
+                    <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">{{$item->name}}のコメント</h1>
                     <div class="card" style="width: 800px;">
                         <div class="comment_box">
                             <h3 class="card-header"> {{$comment->name}}</h3><br>
