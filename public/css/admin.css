@@ -1,12 +1,15 @@
 body {
+  background-image: url(/images/3426290_s.jpg?e73f4aeaff960e7b71a8c664f346c61e);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fffacd;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
   color: #000;
 }
 
 .navbar-laravel {
-  background-color: #808000;
+  background-color: #2f4f4f;
   box-shadow: 2px 4px black;
 }
 

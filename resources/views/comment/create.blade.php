@@ -1,16 +1,16 @@
-{{-- layouts/admin.blade.phpを読み込む --}}
+<!-- layouts/admin.blade.phpを読み込む -->
 @extends('layouts.admin')
 
 
-{{-- admin.blade.phpの@yield('title')に'コメント投稿'を埋め込む --}}
+<!-- admin.blade.phpの@yield('title')に'コメント投稿'を埋め込む -->
 @section('title', 'コメント投稿')
 
-{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+<!-- admin.blade.phpの@yield('content')に以下のタグを埋め込む -->
 @section('content')
 <div class="container-fluid">
    <div class="">
        <div class="mx-auto" style="max-width:800px">
-           <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">コメント投稿</h1>
+           <h1 style="color:#f0f8ff; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">コメント投稿</h1>
            <div class="">
               <form action="{{ action('CommentController@create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)

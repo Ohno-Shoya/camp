@@ -1,16 +1,16 @@
-{{-- layouts/admin.blade.phpを読み込む --}}
+<!-- layouts/admin.blade.phpを読み込む -->
 @extends('layouts.admin')
 
 
-{{-- admin.blade.phpの@yield('title')に'ページ名'を埋め込む --}}
+<!-- admin.blade.phpの@yield('title')に'ページ名'を埋め込む -->
 @section('title', '▲TentFans')
 
-{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+<!-- admin.blade.phpの@yield('content')に以下のタグを埋め込む -->
 @section('content')
 <div class="container-fluid">
    <div class="">
        <div class="mx-auto" style="max-width:1200px">
-           <h1 style="color:#555555; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">テント一覧</h1>
+           <h1 style="color:#f0f8ff; text-align:center; font-size:2.5em; padding:24px 0px; font-weight:bold;">テント一覧</h1>
            <div class="">
               <div class="d-flex flex-row flex-wrap">
                      <!--商品一覧を出したい-->

@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
      public function run()
     {
         $this->call([ItemTableSeeder::class,]);
-        $this->call([CommentTableSeeder::class,]);
-        $this->call([SideberTableSeeder::class,]);
+        // $this->call([CommentTableSeeder::class,]);
+        // $this->call([SideberTableSeeder::class,]);
         
         
     }
